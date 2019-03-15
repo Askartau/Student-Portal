@@ -7,6 +7,9 @@ import Faculty from './components/organisms/Faculty'
 import Account from './components/organisms/Account';
 import AccountSettings from './components/organisms/AccountSettings';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Intro from './components/organisms/Intro';
+import Orders from './components/organisms/Orders'
+import Register from './components/organisms/Register'
 
 class App extends Component {
   render() {
@@ -18,6 +21,9 @@ class App extends Component {
           <Route path="/faculties/" component={Faculty}></Route>
           <Route path="/profile/" exact component={Account}></Route>
           <Route path="/profile/settings/" component={AccountSettings}></Route>
+          <Route path="/intro/" component={Intro}></Route>
+          <Route path="/orders/" component={Orders}></Route>
+          <Route path="/register/" component={Register}></Route>
           
           <Footer />
         </div>
