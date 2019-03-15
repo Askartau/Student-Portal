@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Intro from './components/organisms/Intro';
 import Orders from './components/organisms/Orders'
 import Register from './components/organisms/Register'
+import FacultyList from './components/organisms/FacultyList'
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path="/intro/" component={Intro}></Route>
           <Route path="/orders/" component={Orders}></Route>
           <Route path="/register/" component={Register}></Route>
+          <Route path="/flist/" component={FacultyList}></Route>
           
           <Footer />
         </div>
