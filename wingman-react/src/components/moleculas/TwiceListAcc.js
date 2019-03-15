@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Subject from './Subject';
-import Teacher from './Teacher';
 
-class TwiceList extends Component {
-
+class TwiceListAcc extends Component{
     render() {
         return(
             <>
@@ -14,10 +12,10 @@ class TwiceList extends Component {
                             <div className="col">
                                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                                     <li className="nav-item">
-                                        <a className="nav-link active" id="teachers-tab" data-toggle="tab" href="#teachers" role="tab" aria-controls="teachers" aria-selected="true">Teachers</a>
+                                        <a className="nav-link active" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="true">Projects</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" id="subjects-tab" data-toggle="tab" href="#subjects" role="tab" aria-controls="subjects" aria-selected="false">Subjects</a>
+                                        <a className="nav-link" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false">Orders</a>
                                     </li>
                                 </ul>
                             </div>
@@ -28,27 +26,27 @@ class TwiceList extends Component {
 
             <section className="flush-with-above">
                 <div className="tab-content">
-                    <div className="tab-pane fade show active" id="teachers" role="tabpanel" aria-labelledby="teachers-tab">
+                    <div className="tab-pane fade show active" id="projects" role="tabpanel" aria-labelledby="projects-tab">
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-6">
-                                    <Teacher />
+                                    <Subject />
                                 </div>
                                 
                                 <div className="col-12 col-md-6">
-                                    <Teacher />
+                                    <Subject />
                                 </div>
                                 <div className="col-12 col-md-6">
-                                    <Teacher />
+                                    <Subject />
                                 </div>
                                 <div className="col-12 col-md-6">
-                                    <Teacher />
+                                    <Subject />
                                 </div>
                             </div>
                         </div>    
                     </div>
                 
-                    <div className="tab-pane fade" id="subjects" role="tabpanel" aria-labelledby="subjects-tab">
+                    <div className="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="orders-tab">
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-6">
@@ -82,4 +80,4 @@ class TwiceList extends Component {
     }
 }
 
-export default TwiceList;
+export default TwiceListAcc;
