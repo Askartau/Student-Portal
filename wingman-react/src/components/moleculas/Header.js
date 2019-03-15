@@ -41,7 +41,7 @@ class Header extends Component {
                             { this.state.isLoggedIn &&
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <Link to="/about/" className="nav-link">About us</Link>
+                                        <Link to="/intro/" className="nav-link">About us</Link>
                                     </li>
 
                                     <li className="nav-item dropdown">
