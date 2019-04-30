@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as facultyAction from '../../actions/facultyAction';
 
 class FCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          
+        }
+      }
+    componentDidMount() {
+        this.props.getFaculties(); 
+    }
     render() {
         return(
             <tbody>
@@ -211,5 +222,14 @@ class FCard extends Component {
         );
     }
 }
+const mapStateToProps = (state) => ({
+    faculties: state.faculty.faculties
+  })
 
-export default FCard;
+const mapDispatchToProps = {
+    getFaculties: facultyAction.getFaculties
+  }
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(FCard);

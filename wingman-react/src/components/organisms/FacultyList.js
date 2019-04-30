@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import DFList from '../moleculas/DFList';
 import FCard from '../moleculas/FCard';
 
@@ -30,5 +31,4 @@ class FacultyList extends Component {
         );
     }
 }
-
 export default FacultyList;

@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Subject from './Subject';
 import Teacher from './Teacher';
+import * as subjectAction from '../../actions/subjectAction';
+import * as teachersAction from '../../actions/teachersAction';
 
 class TwiceList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          
+        }
+      }
+    componentDidMount() {
+        this.props.getTeachers(); 
+        this.props.getSubjects();
+    }
 
     render() {
         return(
@@ -81,5 +94,16 @@ class TwiceList extends Component {
         );
     }
 }
+const mapStateToProps = (state) => ({
+    teachers: state.teacher.teachers,
+    subjects: state.subject.subjects
+  })
 
-export default TwiceList;
+const mapDispatchToProps = {
+    getTeachers: teachersAction.getTeachersForFaculty,
+    getSubjects: subjectAction.getSubjectsForFaculty
+  }
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(TwiceList);
